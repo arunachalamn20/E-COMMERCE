@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3b82f6", secondary: "#10B981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .battery-container {
+      position: relative;
+      width: 200px;
+      height: 100px;
+      margin: 0 auto;
+      }
+      .battery-body {
+      position: absolute;
+      width: 180px;
+      height: 80px;
+      background-color: #f0f0f0;
+      border: 3px solid #333;
+      border-radius: 10px;
+      left: 0;
+      top: 10px;
+      }
+      .battery-tip {
+      position: absolute;
+      width: 20px;
+      height: 40px;
+      background-color: #333;
+      border-radius: 0 5px 5px 0;
+      right: 0;
+      top: 30px;
+      }
+      .battery-level {
+      position: absolute;
+      height: 74px;
+      background: linear-gradient(90deg, #4F46E5, #10B981);
+      border-radius: 6px;
+      left: 3px;
+      top: 3px;
+      width: 0%;
+      transition: width 1.5s ease-in-out;
+      }
+      .battery-charge {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      color: white;
+      font-weight: bold;
+      text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+      z-index: 10;
+      }
+      .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      overflow: hidden;
+      }
+      .particle {
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      animation: particleMove 1.5s infinite linear;
+      }
+      @keyframes particleMove {
+      0% {
+      transform: translateX(-10px);
+      opacity: 0;
+      }
+      50% {
+      opacity: 1;
+      }
+      100% {
+      transform: translateX(170px);
+      opacity: 0;
+      }
+      }
+      .pulse {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.3);
+      animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+      0% {
+      opacity: 0.3;
+      }
+      50% {
+      opacity: 0.6;
+      }
+      100% {
+      opacity: 0.3;
+      }
+      }
+      .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      transition: all 0.3s;
+      outline: none;
+      }
+      .form-input:focus {
+      border-color: #4F46E5;
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+      }
+      .submit-button {
+      position: relative;
+      overflow: hidden;
+      }
+      .submit-button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: all 0.6s;
+      }
+      .submit-button:hover::before {
+      left: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen relative overflow-x-hidden">
+
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">Sri Eniya</a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="home.html" class="text-gray-600 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a href="product.html" class="text-gray-600 hover:text-primary transition-colors"
+            >Products</a
+          >
+          <a href="about.html" class="text-gray-600 hover:text-primary transition-colors"
+            >About Us</a
+          >
+          <a href="contact.html" class="text-primary font-medium">Contact</a>
+        </nav>
+        <div class="md:hidden w-10 h-10 flex items-center justify-center">
+          <i class="ri-menu-line ri-lg"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="pt-20 pb-16">
+      <!-- Page Title -->
+      <div class="container mx-auto px-4 py-12 text-center relative">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Get in Touch</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          We're here to help and answer any questions you might have. We look
+          forward to hearing from you.
+        </p>
+      </div>
+      <!-- Battery Animation -->
+      <div class="container mx-auto px-4 py-8">
+        <div class="battery-container">
+          <div class="battery-body">
+            <div class="battery-level" id="batteryLevel">
+              <div class="pulse"></div>
+              <div class="particles" id="particles"></div>
+            </div>
+          </div>
+          <div class="battery-tip"></div>
+          <div class="battery-charge" id="batteryCharge">0%</div>
+        </div>
+        <p class="text-center text-gray-600 mt-4">
+          Our connection status is
+          <span id="connectionStatus" class="font-medium text-primary"
+            >initializing</span
+          >
+        </p>
+      </div>
+      <!-- Contact Form Section -->
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="max-w-3xl mx-auto bg-white rounded-lg shadow-xl overflow-hidden relative"
+        >
+          <div class="absolute top-0 left-0 w-full h-2 bg-[#3b82f6]"></div>
+          <div class="p-8">
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">
+              Send Us a Message
+            </h2>
+            <form id="contactForm" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="name"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Full Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-input"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-input"
+                    placeholder="john@example.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  for="subject"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="How can we help you?"
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block text-sm font-medium text-gray-700 mb-2"
+                  >Message *</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="form-input resize-none"
+                  placeholder="Tell us more about your inquiry..."
+                  required
+                ></textarea>
+              </div>
+              <div class="flex justify-end">
+                <button
+                  type="submit"
+                  class="submit-button bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Alternative Contact Methods -->
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-5 transition-opacity duration-300"
+            ></div>
+            <div
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-map-pin-line ri-lg text-primary"></i>
+            </div>
+            <h3 class="text-lg font-medium text-gray-900 mb-2">Our Location</h3>
+            <p class="text-gray-600">
+              123 Innovation Drive<br />Tech Valley, CA 94103<br />United States
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-5 transition-opacity duration-300"
+            ></div>
+            <div
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-phone-line ri-lg text-primary"></i>
+            </div>
+            <h3 class="text-lg font-medium text-gray-900 mb-2">Phone Number</h3>
+            <p class="text-gray-600">
+              Customer Support:<br />+1 (555) 123-4567
+            </p>
+            <p class="text-gray-600 mt-2">
+              Sales Inquiries:<br />+1 (555) 987-6543
+            </p>
+          </div>
+          <div
+            class="bg-white p-6 rounded-lg shadow-lg text-center group hover:shadow-xl transition-shadow duration-300 relative overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-5 transition-opacity duration-300"
+            ></div>
+            <div
+              class="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="ri-mail-line ri-lg text-primary"></i>
+            </div>
+            <h3 class="text-lg font-medium text-gray-900 mb-2">Email Us</h3>
+            <p class="text-gray-600">
+              General Inquiries:<br />info@company.com
+            </p>
+            <p class="text-gray-600 mt-2">
+              Support Team:<br />support@company.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Map Section -->
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="rounded-lg overflow-hidden shadow-lg h-80 bg-cover bg-center"
+          style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png');"
+        ></div>
+      </div>
+      <!-- Social Media Section -->
+      <div class="container mx-auto px-4 py-12 text-center">
+        <h2 class="text-2xl font-bold text-gray-900 mb-6">Connect With Us</h2>
+        <div class="flex justify-center space-x-6">
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+          >
+            <i class="ri-facebook-fill ri-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+          >
+            <i class="ri-twitter-fill ri-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+          >
+            <i class="ri-instagram-line ri-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+          >
+            <i class="ri-linkedin-fill ri-lg"></i>
+          </a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+          >
+            <i class="ri-youtube-fill ri-lg"></i>
+          </a>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 block"
+              >Sri Eniya</a
+            >
+            <p class="text-gray-400 mt-4">
+              Innovative solutions for a connected world. We're committed to
+              providing the best experience for our customers.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="home.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="product.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Documentation</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Support</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-medium mb-4">Newsletter</h3>
+            <p class="text-gray-400 mb-4">
+              Subscribe to our newsletter for the latest updates
+            </p>
+            <div class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="px-4 py-2 w-full bg-gray-800 border-none rounded-l-button text-white focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button
+                class="bg-primary px-4 py-2 rounded-r-button whitespace-nowrap"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400">
+            © 2025 Company Name. All rights reserved.
+          </p>
+          <div class="mt-4 md:mt-0 flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Privacy Policy</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Terms of Service</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script id="batteryAnimation">
+      document.addEventListener("DOMContentLoaded", function () {
+        const batteryLevel = document.getElementById("batteryLevel");
+        const batteryCharge = document.getElementById("batteryCharge");
+        const connectionStatus = document.getElementById("connectionStatus");
+        const particles = document.getElementById("particles");
+        // Initial battery level
+        let level = 0;
+        let statusMessages = [
+          "initializing",
+          "connecting",
+          "establishing secure channel",
+          "ready to communicate",
+        ];
+        let currentStatus = 0;
+        // Create particles
+        function createParticles() {
+          particles.innerHTML = "";
+          for (let i = 0; i < 10; i++) {
+            const particle = document.createElement("div");
+            particle.classList.add("particle");
+            particle.style.width = Math.random() * 5 + 2 + "px";
+            particle.style.height = particle.style.width;
+            particle.style.top = Math.random() * 74 + "px";
+            particle.style.animationDelay = Math.random() * 1.5 + "s";
+            particles.appendChild(particle);
+          }
+        }
+        // Animate battery level
+        function animateBattery() {
+          if (level < 100) {
+            level += 1;
+            batteryLevel.style.width = level + "%";
+            batteryCharge.textContent = level + "%";
+            // Update connection status at certain levels
+            if (level === 25) {
+              currentStatus = 1;
+              connectionStatus.textContent = statusMessages[currentStatus];
+            } else if (level === 50) {
+              currentStatus = 2;
+              connectionStatus.textContent = statusMessages[currentStatus];
+            } else if (level === 75) {
+              currentStatus = 3;
+              connectionStatus.textContent = statusMessages[currentStatus];
+              connectionStatus.classList.add("text-green-600");
+              connectionStatus.classList.remove("text-primary");
+            }
+            setTimeout(animateBattery, 50);
+          }
+        }
+        // Start animations
+        createParticles();
+        setTimeout(animateBattery, 1000);
+      });
+    </script>
+    <script id="formInteraction">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contactForm");
+        const formInputs = contactForm.querySelectorAll("input, textarea");
+        const batteryLevel = document.getElementById("batteryLevel");
+        const batteryCharge = document.getElementById("batteryCharge");
+        let formProgress = 0;
+        const totalFields = formInputs.length;
+        // Update battery based on form completion
+        function updateFormBattery() {
+          let filledFields = 0;
+          formInputs.forEach((input) => {
+            if (input.value.trim() !== "") {
+              filledFields++;
+            }
+          });
+          formProgress = Math.floor((filledFields / totalFields) * 100);
+          // Only update if less than the animated level
+          const currentLevel = parseInt(batteryCharge.textContent);
+          if (formProgress > currentLevel) {
+            batteryLevel.style.width = formProgress + "%";
+            batteryCharge.textContent = formProgress + "%";
+          }
+        }
+        // Add input event listeners to all form fields
+        formInputs.forEach((input) => {
+          input.addEventListener("input", updateFormBattery);
+        });
+        // Form submission
+        contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          // Simple validation
+          let isValid = true;
+          const requiredInputs = contactForm.querySelectorAll("[required]");
+          requiredInputs.forEach((input) => {
+            if (input.value.trim() === "") {
+              isValid = false;
+              input.classList.add("border-red-500");
+            } else {
+              input.classList.remove("border-red-500");
+            }
+          });
+          if (isValid) {
+            // Set battery to 100%
+            batteryLevel.style.width = "100%";
+            batteryCharge.textContent = "100%";
+            // Show success message (you would implement this)
+            alert("Your message has been sent successfully!");
+            // Reset form
+            contactForm.reset();
+            // Reset battery after delay
+            setTimeout(() => {
+              batteryLevel.style.width = "0%";
+              batteryCharge.textContent = "0%";
+              // Restart animation
+              setTimeout(() => {
+                let level = 0;
+                function animateBattery() {
+                  if (level < 75) {
+                    level += 1;
+                    batteryLevel.style.width = level + "%";
+                    batteryCharge.textContent = level + "%";
+                    setTimeout(animateBattery, 50);
+                  }
+                }
+                animateBattery();
+              }, 500);
+            }, 2000);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

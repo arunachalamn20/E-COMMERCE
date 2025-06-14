@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#3b82f6", secondary: "#10B981" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      .timeline-connector {
+      width: 2px;
+      background-color: #4f46e5;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      }
+      .timeline-dot {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #4f46e5;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      }
+      .value-card:hover .value-description {
+      opacity: 1;
+      transform: translateY(0);
+      }
+      .team-card:hover .team-overlay {
+      opacity: 1;
+      }
+      .team-card:hover img {
+      transform: scale(1.05);
+      }
+      .stat-counter {
+      counter-reset: stat-counter var(--start-value);
+      animation: count-up 2s forwards;
+      }
+      .header-transparent {
+      background-color: transparent;
+      transition: background-color 0.3s ease;
+      }
+      .header-solid {
+      background-color: white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-white min-h-screen relative overflow-x-hidden">
+    <div
+      class="absolute top-0 right-0 w-[800px] h-[800px] bg-[#3b82f6] rounded-full opacity-10 blur-3xl -translate-y-1/2 translate-x-1/2"
+    ></div>
+    <div
+      class="absolute top-[20%] left-0 w-[600px] h-[600px] bg-[#3b82f6] rounded-full opacity-10 blur-3xl -translate-x-1/2"
+    ></div>
+    <div
+      class="absolute bottom-0 right-[20%] w-[500px] h-[500px] bg-[#3b82f6] rounded-full opacity-10 blur-3xl translate-y-1/4"
+    ></div>
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+      <div
+        class="container mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-primary">Sri Eniya</a>
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="home.html" class="text-gray-600 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a href="product.html" class="text-gray-600 hover:text-primary transition-colors"
+            >Products</a
+          >
+          <a href="about.html" class="text-primary font-medium"
+            >About Us</a
+          >
+          <a href="contact.html" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <div class="md:hidden w-10 h-10 flex items-center justify-center">
+          <i class="ri-menu-line ri-lg"></i>
+        </div>
+      </div>
+    </header>
+   <!-- Hero Section -->
+    <section class="relative pt-20">
+      <div class="w-full h-[600px] overflow-hidden">
+        <div
+          style="background-image: url('https://readdy.ai/api/search-image?query=A%2520modern%2520corporate%2520office%2520interior%2520with%2520a%2520team%2520of%2520diverse%2520professionals%2520collaborating%2520around%2520a%2520table%2520with%2520battery%2520technology%2520and%2520sustainable%2520energy%2520solutions.%2520The%2520left%2520side%2520of%2520the%2520image%2520has%2520a%2520smooth%2520gradient%2520light%2520background%2520that%2520transitions%2520seamlessly%2520to%2520the%2520office%2520scene%2520on%2520the%2520right.%2520Natural%2520light%2520streams%2520through%2520large%2520windows%2520creating%2520a%2520bright%252C%2520inspiring%2520atmosphere.%2520The%2520space%2520features%2520modern%2520furniture%2520and%2520subtle%2520branding%2520elements.&width=1600&height=600&seq=11&orientation=landscape'); background-position: center; background-size: cover; background-repeat: no-repeat;"
+          class="absolute inset-0"
+        ></div>
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"
+        ></div>
+        <div
+          class="container mx-auto px-4 h-full flex items-center relative z-10"
+        >
+          <div class="max-w-2xl">
+            <h1
+              class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-4"
+            >
+              Powering the Future, Responsibly
+            </h1>
+            <p class="text-lg text-gray-700 mb-8">
+              Since 2010, PowerSource has been dedicated to providing premium
+              battery solutions while championing sustainability and innovation
+              in the power industry.
+            </p>
+            <a
+              href="#our-story"
+              class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition shadow-md !rounded-button whitespace-nowrap inline-flex items-center"
+            >
+              Discover Our Story
+              <div class="w-5 h-5 flex items-center justify-center ml-2">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Mission Statement -->
+    <section class="py-20 bg-white" id="our-story">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+          <div
+            class="relative p-8 border-2 border-primary/20 rounded-full bg-primary/5 mb-10"
+          >
+            <p class="text-xl text-gray-800 italic">
+              To revolutionize how the world powers devices by creating
+              sustainable, efficient, and reliable battery solutions that
+              empower people and protect our planet.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-recycle-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Sustainability</h3>
+              <p class="text-gray-600">
+                Committed to environmentally responsible manufacturing and
+                recycling practices that minimize our ecological footprint.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-lightbulb-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Innovation</h3>
+              <p class="text-gray-600">
+                Continuously pushing the boundaries of battery technology to
+                create more efficient and longer-lasting power solutions.
+              </p>
+            </div>
+            <div
+              class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition"
+            >
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-shield-check-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-2">Reliability</h3>
+              <p class="text-gray-600">
+                Delivering consistent, high-quality products that customers can
+                depend on for all their power needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Journey Timeline -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
+          Our Journey
+        </h2>
+        <div class="relative max-w-4xl mx-auto">
+          <div class="timeline-connector"></div>
+          <div class="space-y-20">
+            <div class="relative">
+              <div class="timeline-dot" style="top: 24px;"></div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:text-right md:pr-12">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2010</h3>
+                  <h4 class="text-lg font-medium text-primary mb-3">
+                    The Beginning
+                  </h4>
+                  <p class="text-gray-600">
+                    PowerSource was founded by Jennifer Chen and Michael
+                    Rodriguez, two engineers with a vision to create more
+                    sustainable battery solutions.
+                  </p>
+                </div>
+                <div class="md:pl-12"></div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="timeline-dot" style="top: 24px;"></div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:pr-12"></div>
+                <div class="md:pl-12">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2013</h3>
+                  <h4 class="text-lg font-medium text-primary mb-3">
+                    First Major Breakthrough
+                  </h4>
+                  <p class="text-gray-600">
+                    Launched our patented EcoCharge technology, increasing
+                    battery efficiency by 35% while reducing environmental
+                    impact.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="timeline-dot" style="top: 24px;"></div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:text-right md:pr-12">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2016</h3>
+                  <h4 class="text-lg font-medium text-primary mb-3">
+                    Global Expansion
+                  </h4>
+                  <p class="text-gray-600">
+                    Opened international offices in Europe and Asia, bringing
+                    our sustainable battery solutions to a global market.
+                  </p>
+                </div>
+                <div class="md:pl-12"></div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="timeline-dot" style="top: 24px;"></div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:pr-12"></div>
+                <div class="md:pl-12">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2019</h3>
+                  <h4 class="text-lg font-medium text-primary mb-3">
+                    Sustainability Initiative
+                  </h4>
+                  <p class="text-gray-600">
+                    Launched our comprehensive battery recycling program and
+                    committed to carbon-neutral manufacturing by 2025.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="timeline-dot" style="top: 24px;"></div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:text-right md:pr-12">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2022</h3>
+                  <h4 class="text-lg font-medium text-primary mb-3">
+                    Innovation Award
+                  </h4>
+                  <p class="text-gray-600">
+                    Received the Global Energy Innovation Award for our
+                    next-generation lithium-ion technology with extended
+                    lifecycle.
+                  </p>
+                </div>
+                <div class="md:pl-12"></div>
+              </div>
+            </div>
+            <div class="relative">
+              <div class="timeline-dot" style="top: 24px;"></div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="md:pr-12"></div>
+                <div class="md:pl-12">
+                  <h3 class="text-xl font-bold text-gray-900 mb-2">2025</h3>
+                  <h4 class="text-lg font-medium text-primary mb-3">
+                    Today & Beyond
+                  </h4>
+                  <p class="text-gray-600">
+                    Continuing our mission with advanced research into
+                    solid-state batteries and expanding our sustainable energy
+                    solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Core Values -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
+          Our Core Values
+        </h2>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto"
+        >
+          <div
+            class="value-card bg-white rounded-lg shadow-sm overflow-hidden relative group"
+          >
+            <div class="p-8 border-b-4 border-primary">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-award-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Excellence</h3>
+              <p class="text-gray-600 mb-4">
+                We strive for excellence in everything we do, from product
+                design to customer service.
+              </p>
+              <div
+                class="value-description absolute inset-0 bg-primary/95 p-8 flex items-center justify-center opacity-0 transition-all duration-300 transform translate-y-8"
+              >
+                <p class="text-white text-center">
+                  Our commitment to excellence drives us to continuously improve
+                  our products, processes, and services to exceed customer
+                  expectations and industry standards.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="value-card bg-white rounded-lg shadow-sm overflow-hidden relative group"
+          >
+            <div class="p-8 border-b-4 border-primary">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-earth-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Sustainability
+              </h3>
+              <p class="text-gray-600 mb-4">
+                We are committed to environmentally responsible practices
+                throughout our operations.
+              </p>
+              <div
+                class="value-description absolute inset-0 bg-primary/95 p-8 flex items-center justify-center opacity-0 transition-all duration-300 transform translate-y-8"
+              >
+                <p class="text-white text-center">
+                  Sustainability is at the heart of our business model. We
+                  prioritize eco-friendly materials, energy-efficient
+                  manufacturing, and comprehensive recycling programs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="value-card bg-white rounded-lg shadow-sm overflow-hidden relative group"
+          >
+            <div class="p-8 border-b-4 border-primary">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-lightbulb-flash-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Innovation</h3>
+              <p class="text-gray-600 mb-4">
+                We constantly pursue new ideas and technologies to advance
+                battery performance.
+              </p>
+              <div
+                class="value-description absolute inset-0 bg-primary/95 p-8 flex items-center justify-center opacity-0 transition-all duration-300 transform translate-y-8"
+              >
+                <p class="text-white text-center">
+                  Innovation is our driving force. We invest heavily in R&D to
+                  develop cutting-edge battery technologies that push the
+                  boundaries of what's possible.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="value-card bg-white rounded-lg shadow-sm overflow-hidden relative group"
+          >
+            <div class="p-8 border-b-4 border-primary">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-team-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Collaboration
+              </h3>
+              <p class="text-gray-600 mb-4">
+                We believe in the power of teamwork and partnerships to achieve
+                our goals.
+              </p>
+              <div
+                class="value-description absolute inset-0 bg-primary/95 p-8 flex items-center justify-center opacity-0 transition-all duration-300 transform translate-y-8"
+              >
+                <p class="text-white text-center">
+                  Through collaboration with team members, customers, and
+                  industry partners, we create synergies that lead to better
+                  products and solutions.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="value-card bg-white rounded-lg shadow-sm overflow-hidden relative group"
+          >
+            <div class="p-8 border-b-4 border-primary">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-user-heart-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Integrity</h3>
+              <p class="text-gray-600 mb-4">
+                We conduct business with honesty, transparency, and ethical
+                standards.
+              </p>
+              <div
+                class="value-description absolute inset-0 bg-primary/95 p-8 flex items-center justify-center opacity-0 transition-all duration-300 transform translate-y-8"
+              >
+                <p class="text-white text-center">
+                  Integrity is non-negotiable at PowerSource. We build trust
+                  through honest communication, ethical business practices, and
+                  standing behind our products.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="value-card bg-white rounded-lg shadow-sm overflow-hidden relative group"
+          >
+            <div class="p-8 border-b-4 border-primary">
+              <div
+                class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4"
+              >
+                <div
+                  class="w-8 h-8 flex items-center justify-center text-primary"
+                >
+                  <i class="ri-customer-service-2-line text-xl"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Customer Focus
+              </h3>
+              <p class="text-gray-600 mb-4">
+                We put our customers at the center of everything we do.
+              </p>
+              <div
+                class="value-description absolute inset-0 bg-primary/95 p-8 flex items-center justify-center opacity-0 transition-all duration-300 transform translate-y-8"
+              >
+                <p class="text-white text-center">
+                  Our customers' needs drive our innovation. We listen carefully
+                  to feedback and continuously improve our products and services
+                  to deliver exceptional value.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Team -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
+          Meet Our Leadership Team
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="team-card bg-white rounded-lg shadow-sm overflow-hidden group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520confident%2520Asian%2520woman%2520in%2520her%2520early%252040s%2520with%2520shoulder-length%2520black%2520hair%252C%2520wearing%2520a%2520modern%2520business%2520outfit%2520with%2520a%2520blue%2520accent%252C%2520against%2520a%2520neutral%2520background.%2520She%2520has%2520a%2520friendly%2520yet%2520authoritative%2520expression%252C%2520suggesting%2520leadership%2520and%2520expertise.%2520The%2520photo%2520is%2520well-lit%2520with%2520professional%2520studio%2520lighting%2520creating%2520a%2520clean%252C%2520corporate%2520aesthetic.&width=400&height=500&seq=12&orientation=portrait"
+                alt="Jennifer Chen, CEO"
+                class="w-full h-64 object-cover object-top transition-transform duration-300"
+              />
+              <div
+                class="team-overlay absolute inset-0 bg-primary/80 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 p-4"
+              >
+                <div class="flex space-x-3 mb-4">
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-linkedin-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-twitter-x-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-mail-fill text-white"></i>
+                    </div>
+                  </a>
+                </div>
+                <p class="text-white text-center text-sm">
+                  "Innovation is about finding solutions to problems that
+                  matter."
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-1">
+                Jennifer Chen
+              </h3>
+              <p class="text-primary font-medium mb-2">Co-Founder & CEO</p>
+              <p class="text-gray-600 text-sm">
+                Former Tesla engineer with 15+ years of experience in battery
+                technology and sustainable energy solutions.
+              </p>
+            </div>
+          </div>
+          <div
+            class="team-card bg-white rounded-lg shadow-sm overflow-hidden group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Latino%2520man%2520in%2520his%2520mid-40s%2520with%2520short%2520dark%2520hair%2520and%2520glasses%252C%2520wearing%2520a%2520modern%2520business%2520casual%2520outfit%2520with%2520a%2520subtle%2520pattern%252C%2520against%2520a%2520neutral%2520background.%2520He%2520has%2520a%2520thoughtful%252C%2520intelligent%2520expression%2520suggesting%2520technical%2520expertise.%2520The%2520photo%2520is%2520well-lit%2520with%2520professional%2520studio%2520lighting%2520creating%2520a%2520clean%252C%2520corporate%2520aesthetic.&width=400&height=500&seq=13&orientation=portrait"
+                alt="Michael Rodriguez, CTO"
+                class="w-full h-64 object-cover object-top transition-transform duration-300"
+              />
+              <div
+                class="team-overlay absolute inset-0 bg-primary/80 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 p-4"
+              >
+                <div class="flex space-x-3 mb-4">
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-linkedin-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-twitter-x-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-mail-fill text-white"></i>
+                    </div>
+                  </a>
+                </div>
+                <p class="text-white text-center text-sm">
+                  "Technology should solve real problems while respecting our
+                  planet."
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-1">
+                Michael Rodriguez
+              </h3>
+              <p class="text-primary font-medium mb-2">Co-Founder & CTO</p>
+              <p class="text-gray-600 text-sm">
+                MIT graduate with multiple patents in energy storage technology
+                and sustainable manufacturing processes.
+              </p>
+            </div>
+          </div>
+          <div
+            class="team-card bg-white rounded-lg shadow-sm overflow-hidden group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520Black%2520woman%2520in%2520her%2520late%252030s%2520with%2520natural%2520hair%2520styled%2520professionally%252C%2520wearing%2520a%2520modern%2520business%2520outfit%2520in%2520navy%2520blue%252C%2520against%2520a%2520neutral%2520background.%2520She%2520has%2520a%2520confident%252C%2520approachable%2520expression%2520suggesting%2520leadership%2520in%2520finance.%2520The%2520photo%2520is%2520well-lit%2520with%2520professional%2520studio%2520lighting%2520creating%2520a%2520clean%252C%2520corporate%2520aesthetic.&width=400&height=500&seq=14&orientation=portrait"
+                alt="Sarah Johnson, CFO"
+                class="w-full h-64 object-cover object-top transition-transform duration-300"
+              />
+              <div
+                class="team-overlay absolute inset-0 bg-primary/80 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 p-4"
+              >
+                <div class="flex space-x-3 mb-4">
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-linkedin-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-twitter-x-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-mail-fill text-white"></i>
+                    </div>
+                  </a>
+                </div>
+                <p class="text-white text-center text-sm">
+                  "Sustainable business practices lead to sustainable profits."
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-1">
+                Sarah Johnson
+              </h3>
+              <p class="text-primary font-medium mb-2">
+                Chief Financial Officer
+              </p>
+              <p class="text-gray-600 text-sm">
+                Former investment banker with expertise in green financing and
+                sustainable business models.
+              </p>
+            </div>
+          </div>
+          <div
+            class="team-card bg-white rounded-lg shadow-sm overflow-hidden group"
+          >
+            <div class="relative overflow-hidden">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520an%2520Indian%2520man%2520in%2520his%2520early%252040s%2520with%2520short%2520black%2520hair%2520and%2520a%2520neatly%2520trimmed%2520beard%252C%2520wearing%2520a%2520modern%2520business%2520casual%2520outfit%2520with%2520a%2520light%2520blue%2520shirt%252C%2520against%2520a%2520neutral%2520background.%2520He%2520has%2520a%2520friendly%252C%2520approachable%2520expression%2520suggesting%2520expertise%2520in%2520operations.%2520The%2520photo%2520is%2520well-lit%2520with%2520professional%2520studio%2520lighting%2520creating%2520a%2520clean%252C%2520corporate%2520aesthetic.&width=400&height=500&seq=15&orientation=portrait"
+                alt="Raj Patel, COO"
+                class="w-full h-64 object-cover object-top transition-transform duration-300"
+              />
+              <div
+                class="team-overlay absolute inset-0 bg-primary/80 flex flex-col items-center justify-center opacity-0 transition-opacity duration-300 p-4"
+              >
+                <div class="flex space-x-3 mb-4">
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-linkedin-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-twitter-x-fill text-white"></i>
+                    </div>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center hover:bg-white/40 transition"
+                  >
+                    <div class="w-4 h-4 flex items-center justify-center">
+                      <i class="ri-mail-fill text-white"></i>
+                    </div>
+                  </a>
+                </div>
+                <p class="text-white text-center text-sm">
+                  "Efficiency and sustainability go hand in hand in modern
+                  manufacturing."
+                </p>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-lg font-bold text-gray-900 mb-1">Raj Patel</h3>
+              <p class="text-primary font-medium mb-2">
+                Chief Operations Officer
+              </p>
+              <p class="text-gray-600 text-sm">
+                Supply chain expert with experience implementing sustainable
+                manufacturing practices globally.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Impact Numbers -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
+          Our Impact
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div
+              class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-12 h-12 flex items-center justify-center text-primary"
+              >
+                <i class="ri-recycle-line text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-4xl font-bold text-gray-900 mb-2">
+              <span class="stat-number" data-value="5">5</span>M+
+            </h3>
+            <p class="text-gray-600">Batteries Recycled Annually</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-12 h-12 flex items-center justify-center text-primary"
+              >
+                <i class="ri-earth-line text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-4xl font-bold text-gray-900 mb-2">
+              <span class="stat-number" data-value="42">42</span>%
+            </h3>
+            <p class="text-gray-600">Carbon Footprint Reduction</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-12 h-12 flex items-center justify-center text-primary"
+              >
+                <i class="ri-global-line text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-4xl font-bold text-gray-900 mb-2">
+              <span class="stat-number" data-value="27">27</span>
+            </h3>
+            <p class="text-gray-600">Countries Served</p>
+          </div>
+          <div class="text-center">
+            <div
+              class="w-24 h-24 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <div
+                class="w-12 h-12 flex items-center justify-center text-primary"
+              >
+                <i class="ri-user-heart-line text-3xl"></i>
+              </div>
+            </div>
+            <h3 class="text-4xl font-bold text-gray-900 mb-2">
+              <span class="stat-number" data-value="98">98</span>%
+            </h3>
+            <p class="text-gray-600">Customer Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sustainability Initiatives -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Our Commitment to Sustainability
+            </h2>
+            <p class="text-gray-700 mb-6">
+              At PowerSource, sustainability isn't just a buzzword—it's core to
+              our business model and values. We believe that providing power
+              solutions shouldn't come at the expense of our planet.
+            </p>
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-3"
+                >
+                  <i class="ri-checkbox-circle-line"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-gray-900 mb-1">
+                    Eco-Friendly Materials
+                  </h3>
+                  <p class="text-gray-600 text-sm">
+                    We carefully select materials that minimize environmental
+                    impact while maintaining high performance.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-3"
+                >
+                  <i class="ri-checkbox-circle-line"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-gray-900 mb-1">
+                    Comprehensive Recycling Program
+                  </h3>
+                  <p class="text-gray-600 text-sm">
+                    Our industry-leading recycling program ensures that
+                    batteries are properly processed at end-of-life.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-3"
+                >
+                  <i class="ri-checkbox-circle-line"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-gray-900 mb-1">
+                    Renewable Energy Manufacturing
+                  </h3>
+                  <p class="text-gray-600 text-sm">
+                    Our facilities are increasingly powered by renewable energy,
+                    with a goal of 100% by 2027.
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-primary mt-0.5 mr-3"
+                >
+                  <i class="ri-checkbox-circle-line"></i>
+                </div>
+                <div>
+                  <h3 class="font-medium text-gray-900 mb-1">
+                    Water Conservation
+                  </h3>
+                  <p class="text-gray-600 text-sm">
+                    Our advanced manufacturing processes use 65% less water than
+                    industry standards.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center text-primary font-medium hover:text-primary/80 transition"
+            >
+              Learn more about our sustainability initiatives
+              <div class="w-5 h-5 flex items-center justify-center ml-1">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+          <div class="relative">
+            <img
+              src="https://readdy.ai/api/search-image?query=A%2520modern%2520sustainable%2520battery%2520manufacturing%2520facility%2520with%2520solar%2520panels%2520on%2520the%2520roof%252C%2520surrounded%2520by%2520green%2520landscaping.%2520The%2520facility%2520features%2520large%2520windows%2520allowing%2520natural%2520light%252C%2520electric%2520vehicle%2520charging%2520stations%2520in%2520the%2520parking%2520area%252C%2520and%2520visible%2520recycling%2520collection%2520points.%2520The%2520image%2520shows%2520a%2520clean%252C%2520high-tech%2520industrial%2520building%2520with%2520subtle%2520eco-friendly%2520design%2520elements%2520and%2520sustainable%2520energy%2520features.&width=600&height=400&seq=16&orientation=landscape"
+              alt="PowerSource Sustainable Manufacturing Facility"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+            <div
+              class="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-md hidden md:block"
+            >
+              <div class="flex items-center">
+                <div
+                  class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4"
+                >
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-green-600"
+                  >
+                    <i class="ri-leaf-line"></i>
+                  </div>
+                </div>
+                <div>
+                  <h4 class="font-medium text-gray-900">Carbon Neutral</h4>
+                  <p class="text-xs text-gray-600">Certified since 2023</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
+          What Our Customers Say
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-8 rounded-lg relative">
+            <div
+              class="absolute -top-5 left-8 w-10 h-10 flex items-center justify-center text-primary text-4xl"
+            >
+              <i class="ri-double-quotes-l"></i>
+            </div>
+            <p class="text-gray-700 italic mb-6">
+              PowerSource batteries have transformed our renewable energy
+              storage capabilities. Their products consistently outperform
+              competitors in lifespan and efficiency.
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520middle-aged%2520man%2520with%2520short%2520gray%2520hair%2520and%2520glasses%252C%2520wearing%2520a%2520business%2520casual%2520outfit%252C%2520against%2520a%2520neutral%2520background.%2520He%2520has%2520a%2520friendly%252C%2520approachable%2520expression.%2520The%2520photo%2520is%2520well-lit%2520with%2520professional%2520studio%2520lighting%2520creating%2520a%2520clean%252C%2520corporate%2520aesthetic.&width=60&height=60&seq=17&orientation=squarish"
+                alt="David Wilson"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-medium text-gray-900">David Wilson</h4>
+                <p class="text-sm text-gray-600">CTO, GreenTech Solutions</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg relative">
+            <div
+              class="absolute -top-5 left-8 w-10 h-10 flex items-center justify-center text-primary text-4xl"
+            >
+              <i class="ri-double-quotes-l"></i>
+            </div>
+            <p class="text-gray-700 italic mb-6">
+              As a retailer, we appreciate PowerSource's commitment to
+              sustainability. Their recycling program has helped us reduce waste
+              while their batteries' longevity keeps customers coming back.
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520a%2520middle-aged%2520woman%2520with%2520shoulder-length%2520blonde%2520hair%252C%2520wearing%2520a%2520business%2520casual%2520outfit%2520in%2520burgundy%252C%2520against%2520a%2520neutral%2520background.%2520She%2520has%2520a%2520confident%252C%2520friendly%2520expression.%2520The%2520photo%2520is%2520well-lit%2520with%2520professional%2520studio%2520lighting%2520creating%2520a%2520clean%252C%2520corporate%2520aesthetic.&width=60&height=60&seq=18&orientation=squarish"
+                alt="Emily Thompson"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-medium text-gray-900">Emily Thompson</h4>
+                <p class="text-sm text-gray-600">
+                  Purchasing Manager, ElectroMart
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg relative">
+            <div
+              class="absolute -top-5 left-8 w-10 h-10 flex items-center justify-center text-primary text-4xl"
+            >
+              <i class="ri-double-quotes-l"></i>
+            </div>
+            <p class="text-gray-700 italic mb-6">
+              We've integrated PowerSource batteries into our medical devices
+              with excellent results. Their reliability and consistent
+              performance are critical for our applications.
+            </p>
+            <div class="flex items-center">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%2520headshot%2520of%2520an%2520Asian%2520man%2520in%2520his%2520late%252040s%2520with%2520short%2520black%2520hair%252C%2520wearing%2520a%2520white%2520lab%2520coat%2520over%2520a%2520blue%2520shirt%252C%2520against%2520a%2520neutral%2520background.%2520He%2520has%2520a%2520serious%252C%2520trustworthy%2520expression%2520suggesting%2520medical%2520expertise.%2520The%2520photo%2520is%2520well-lit%2520with%2520professional%2520studio%2520lighting%2520creating%2520a%2520clean%252C%2520clinical%2520aesthetic.&width=60&height=60&seq=19&orientation=squarish"
+                alt="Dr. James Kim"
+                class="w-12 h-12 rounded-full object-cover object-top mr-4"
+              />
+              <div>
+                <h4 class="font-medium text-gray-900">Dr. James Kim</h4>
+                <p class="text-sm text-gray-600">
+                  Director of R&D, MediTech Devices
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Innovation Hub -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="order-2 lg:order-1">
+            <img
+              src="https://readdy.ai/api/search-image?query=A%2520modern%2520high-tech%2520research%2520laboratory%2520focused%2520on%2520battery%2520technology%252C%2520with%2520scientists%2520in%2520lab%2520coats%2520working%2520with%2520advanced%2520equipment.%2520The%2520lab%2520features%2520testing%2520stations%2520for%2520battery%2520prototypes%252C%2520computer%2520modeling%2520workstations%252C%2520and%2520various%2520battery%2520components%2520being%2520analyzed.%2520The%2520space%2520is%2520bright%2520and%2520clean%2520with%2520a%2520modern%2520scientific%2520aesthetic%252C%2520showing%2520cutting-edge%2520research%2520in%2520progress.&width=600&height=400&seq=20&orientation=landscape"
+              alt="PowerSource Innovation Lab"
+              class="w-full h-auto rounded-lg shadow-lg"
+            />
+          </div>
+          <div class="order-1 lg:order-2">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+              Innovating for Tomorrow
+            </h2>
+            <p class="text-gray-700 mb-6">
+              Our state-of-the-art research and development center is where the
+              future of battery technology takes shape. With a team of
+              world-class scientists and engineers, we're constantly pushing the
+              boundaries of what's possible.
+            </p>
+            <div class="space-y-6 mb-8">
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="font-medium text-gray-900 mb-2">
+                  Solid-State Battery Research
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Our team is developing next-generation solid-state batteries
+                  with higher energy density and improved safety profiles.
+                </p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="font-medium text-gray-900 mb-2">
+                  Biodegradable Components
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  We're pioneering the use of biodegradable materials in battery
+                  construction to reduce end-of-life environmental impact.
+                </p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-sm">
+                <h3 class="font-medium text-gray-900 mb-2">
+                  Smart Battery Management
+                </h3>
+                <p class="text-gray-600 text-sm">
+                  Our advanced BMS technology optimizes battery performance,
+                  extends lifespan, and provides real-time diagnostics.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition shadow-md !rounded-button whitespace-nowrap inline-flex items-center"
+            >
+              Explore Our Innovations
+              <div class="w-5 h-5 flex items-center justify-center ml-2">
+                <i class="ri-arrow-right-line"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+          <h2 class="text-3xl font-bold text-gray-900 text-center mb-16">
+            Get in Touch
+          </h2>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Contact Information
+              </h3>
+              <div class="space-y-4 mb-8">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-primary"
+                    >
+                      <i class="ri-map-pin-line"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Headquarters</h4>
+                    <p class="text-gray-600">
+                      123 Battery Lane, Power City, PC 12345
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-primary"
+                    >
+                      <i class="ri-phone-line"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Phone</h4>
+                    <p class="text-gray-600">+1 (555) 123-4567</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-primary"
+                    >
+                      <i class="ri-mail-line"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Email</h4>
+                    <p class="text-gray-600">info@powersource.com</p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-primary"
+                    >
+                      <i class="ri-time-line"></i>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="font-medium text-gray-900">Hours</h4>
+                    <p class="text-gray-600">
+                      Monday-Friday: 9AM-6PM<br />Saturday: 10AM-4PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-facebook-fill"></i>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-twitter-x-fill"></i>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-instagram-fill"></i>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-primary hover:text-white transition"
+                >
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-linkedin-fill"></i>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900 mb-4">
+                Send Us a Message
+              </h3>
+              <form>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-gray-700 mb-1"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                    />
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    id="subject"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  />
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-gray-700 mb-1"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-button focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition !rounded-button whitespace-nowrap"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 pt-12 pb-6">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <a
+              href="home.html"
+              data-readdy="true"
+              class="text-2xl text-white mb-4 block"
+              >Sri Eniya</a
+            >
+            <p class="text-gray-400 mb-6">
+              Your trusted source for premium batteries and power solutions
+              since 2010.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+              >
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-facebook-fill text-white"></i>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+              >
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-twitter-x-fill text-white"></i>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+              >
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-instagram-fill text-white"></i>
+                </div>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"
+              >
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-youtube-fill text-white"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-lg mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="home.html"
+                  data-readdy="true"
+                  class="text-gray-400 hover:text-white transition"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="product.html" class="text-gray-400 hover:text-white transition"
+                  >Products</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  data-readdy="true"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-lg mb-4">
+              Customer Service
+            </h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >FAQ</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Shipping Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Returns & Refunds</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Battery Recycling</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white font-semibold text-lg mb-4">Contact Us</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-0.5"
+                >
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span>123 Battery Lane, Power City, PC 12345</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-0.5"
+                >
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span>+1 (555) 123-4567</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-0.5"
+                >
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span>info@powersource.com</span>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-0.5"
+                >
+                  <i class="ri-time-line"></i>
+                </div>
+                <span>Mon-Fri: 9AM-6PM<br />Sat: 10AM-4PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-8 border-t border-gray-800 mt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-sm text-gray-500 mb-4 md:mb-0">
+              &copy; 2025 PowerSource. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-4">
+              <div class="w-8 h-5 flex items-center justify-center">
+                <i class="ri-visa-fill text-xl text-gray-400"></i>
+              </div>
+              <div class="w-8 h-5 flex items-center justify-center">
+                <i class="ri-mastercard-fill text-xl text-gray-400"></i>
+              </div>
+              <div class="w-8 h-5 flex items-center justify-center">
+                <i class="ri-paypal-fill text-xl text-gray-400"></i>
+              </div>
+              <div class="w-8 h-5 flex items-center justify-center">
+                <i class="ri-apple-fill text-xl text-gray-400"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script id="mobileMenuScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobileMenuButton");
+        const mobileMenu = document.getElementById("mobileMenu");
+        mobileMenuButton.addEventListener("click", function () {
+          if (mobileMenu.classList.contains("hidden")) {
+            mobileMenu.classList.remove("hidden");
+          } else {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+    <script id="headerScrollScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("header");
+        function updateHeaderBackground() {
+          if (window.scrollY > 50) {
+            header.classList.add("header-solid");
+            header.classList.remove("header-transparent");
+          } else {
+            header.classList.add("header-transparent");
+            header.classList.remove("header-solid");
+          }
+        }
+        // Set initial state
+        updateHeaderBackground();
+        // Update on scroll
+        window.addEventListener("scroll", updateHeaderBackground);
+      });
+    </script>
+    <script id="statsCounterScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        const statNumbers = document.querySelectorAll(".stat-number");
+        function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <=
+              (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+        function animateNumbers() {
+          statNumbers.forEach((stat) => {
+            if (isInViewport(stat) && !stat.classList.contains("counted")) {
+              const targetValue = parseInt(stat.getAttribute("data-value"));
+              let currentValue = 0;
+              const duration = 2000; // ms
+              const increment = targetValue / (duration / 16);
+              stat.classList.add("counted");
+              const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= targetValue) {
+                  clearInterval(timer);
+                  stat.textContent = targetValue;
+                } else {
+                  stat.textContent = Math.floor(currentValue);
+                }
+              }, 16);
+            }
+          });
+        }
+        // Run on scroll
+        window.addEventListener("scroll", animateNumbers);
+        // Run once on page load
+        animateNumbers();
+      });
+    </script>
+    <script id="smoothScrollScript">
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Adjust for header height
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
+

@@ -1762,5 +1762,20 @@
         }
       });
     </script>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileSearch = document.getElementById("mobile-search-container");
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("hidden");
+        mobileSearch.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
+
   </body>
 </html>
